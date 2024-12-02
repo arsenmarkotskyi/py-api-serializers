@@ -120,8 +120,4 @@ class TicketSerializer(serializers.ModelSerializer):
 
 class TicketListSerializer(TicketSerializer):
     movie_session = MovieSessionSerializer(read_only=True)
-    # movie_session = serializers.SlugRelatedField(
-    #     read_only=True,
-    #     slug_field="show_time",
-    # )
     order = OrderSerializer(read_only=True)
